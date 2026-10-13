@@ -1,6 +1,6 @@
 {
-  "name": "Remix2: Proje Tabanlı Yapay Zeka Eğitim Klavuzu",
-  "description": "Burak TURGUT tarafından verilecek olan Proje Tabanlı Yapay Zeka Eğitimi için 4 oturumluk modern rehber ve klavuz sitesi.",
+  "name": "Proje Tabanlı Yapay Zekâ Eğitim Kılavuzu",
+  "description": "19–22 Ekim 2026: dört gün, sekiz saat, 30 araç ile öğretmenler için online uygulamalı ders tasarımı eğitimi.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
