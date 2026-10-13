@@ -46,3 +46,9 @@ Bu derleme yalnızca statik site dosyalarını içerir. Göreli dosya yolları, 
 Güncel programın ve güne özel araçların ortak kaynağı `src/data/curriculum.ts` dosyasıdır. Site ve sohbet asistanı aynı program bilgisini kullanır. Kaynak belgelerin kapsamı ve gün dağılımı için `docs/icerik-kaynaklari.md` dosyasına bakın.
 
 İlerleme bilgisi yalnızca kullanıcının tarayıcısındaki yerel depolamada saklanır; sunucuya gönderilmez.
+
+## Kurum kimliği ve görseller
+
+GitHub'a yüklenen iki JPEG, `src/data/brand.ts` üzerinden kullanılır. Logo üst bölümde, kurum tanıtımında, alt bölümde ve sekme simgesinde gösterilir. Kurum bağlantıları `https://www.gencbeyinler.net/` adresini yeni sekmede açar; kılavuzun yayın adresi GitHub Pages olarak kalır.
+
+Araç kutusu afişi Kaynaklar bölümündedir ve tam boy açılabilir. Afiş genel bir araç haritasıdır; içindeki araç ve ücret etiketleri, eğitimdeki güncel 27 araçlık listeden farklı olabilir. Görsel güncellendiğinde bu açıklama da gözden geçirilmelidir.

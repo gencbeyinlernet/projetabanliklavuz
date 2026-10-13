@@ -25,13 +25,17 @@ Belgedeki terminal ve Gemini CLI içeriği yeni programın 1. gününe taşınd�
 
 Kullanıcının son düzenlemeleriyle Adobe Firefly, Julius AI, Mendeley ve Flowise aktif programdan çıkarıldı. Canva Code 2. güne eklendi. Codex, ChatGPT ve Claude/Cowork birlikte ele alınır; GitHub 1., 3. ve 4. günlerde kullanılır ve kaynaklar bölümünde platform ile eğitim deposunun bağlantıları yer alır.
 
-Son değişikliklerden sonra listede 27 araç vardır. Görünen sayı `trainingInfo.toolCount` alanından kullanılır. Araç sayısını 30'a çıkarmak için ek araçlar kullanıcı tarafından ayrıca belirlenmelidir; çıkarılan araçlar sayıyı korumak amacıyla geri eklenmez.
+Kullanıcının onayladığı güncel listede 27 araç vardır. Görünen sayı `trainingInfo.toolCount` alanından kullanılır; çıkarılan araçlar geri eklenmez.
 
 Claude Chat, Projects ve Artifacts, Claude araç kaydının uygulamalarında açıklanır. Canva Code, kullanıcının istediği üzere ayrı bir etkileşimli içerik aracı olarak listelenir. Bir araç farklı günlerde yeniden kullanılabilir; `alsoOnDays` ve ortak filtre fonksiyonu bu ilişkiyi korur.
 
 `src/data/curriculum.ts`, tarihlerin, eğitim adının, iletişim adreslerinin, programın ve araçların ortak kaynağıdır. Site ve sohbet asistanı aynı bilgileri kullanır. Her araç kaydı açıklama, uygulama, kullanım nedeni ve resmî adres içerir.
 
 Araç özellikleri, ücretler, kullanım limitleri, donanım gereksinimleri ve erişim koşulları sağlayıcıya göre değişir. Zamanlanmış görev ve video üretimi gibi uygulamalar hesapta desteklenen özelliklerle anlatılır.
+
+## Kurum görselleri
+
+Kullanıcının GitHub'a yüklediği `WhatsApp Image 2026-10-08 at 08.27.51.jpeg` kurum logosudur. `WhatsApp Image 2026-10-13 at 15.08.25.jpeg` genel araç kutusu afişidir; Kaynaklar bölümünde özgün hâliyle gösterilir ve tam boy açılabilir. Afişteki Julius AI ve diğer araçlar aktif programa geri eklenmez. Görselin güncel 27 araçlık programdan farklı olabildiği açıkça belirtilir.
 
 ## Yayın
 
