@@ -7,6 +7,18 @@ export interface Resource {
 
 export const additionalResources: Resource[] = [
   {
+    id: 'github-start',
+    title: 'GitHub — proje ve sürüm yönetimi',
+    description: 'İlk gün depo, dosya ve sürüm kavramlarını öğreneceğiz; projemizin değişikliklerini GitHub ile takip edeceğiz.',
+    url: 'https://github.com'
+  },
+  {
+    id: 'training-repository',
+    title: 'Eğitimin GitHub kaynak deposu',
+    description: 'Eğitim sitesinin dosyalarını, kurulum açıklamalarını ve proje düzenini bu depoda inceleyeceğiz.',
+    url: 'https://github.com/gencbeyinlernet/projetabanliklavuz'
+  },
+  {
     id: "meb-etik-kilavuz",
     title: "1. Eğitimde Yapay Zekâ Uygulamaları Etik Kılavuzu (MEB)",
     description: "Materyallerimizi hazırlarken güvenli, etik ve sorumlu kullanım ilkelerini bu rehberle kontrol edeceğiz.",

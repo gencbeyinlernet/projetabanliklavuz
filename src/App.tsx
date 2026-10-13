@@ -3,14 +3,15 @@ import { ArrowDown, ArrowRight, ArrowUpRight, BookOpen, CalendarDays, Check, Che
 import Header from './components/Header';
 import PromptBuilder from './components/PromptBuilder';
 import BrainAssistant from './components/BrainAssistant';
+import ContactOptions from './components/ContactOptions';
 import { learningTools, trainingDays, trainingInfo, toolAppearsOnDay, toolDayLabel, type LearningTool } from './data/curriculum';
 import { additionalResources } from './data/resourcesData';
 
 const dayIcons = { Sparkles, Terminal, Palette, Rocket };
 const dayPreviewTools: Record<number, string[]> = {
-  1: ['claude', 'gemini-cli', 'gemini'],
-  2: ['canva', 'firefly', 'elevenlabs'],
-  3: ['notebooklm', 'claude-code', 'cowork'],
+  1: ['codex', 'claude', 'gemini-cli'],
+  2: ['canva', 'canva-code', 'elevenlabs'],
+  3: ['codex', 'claude-code', 'cowork'],
   4: ['firebase', 'supabase', 'netlify'],
 };
 const validLessonIds = new Set(trainingDays.flatMap(day => day.lessons.map(lesson => lesson.id)));
@@ -117,10 +118,10 @@ export default function App() {
             <div className="day-card-top"><span className="day-icon"><Icon size={22} /></span><span>{String(item.id).padStart(2, '0')} / GÜN</span></div><time className="day-date" dateTime={item.date}>{item.dateLabel}</time><p className="day-subtitle">{item.subtitle}</p><h3>{item.title}</h3><p>{item.description}</p><div className="day-tool-chips">{learningTools.filter(tool => (dayPreviewTools[item.id] || []).includes(tool.id)).map(tool => <span key={tool.id}>{tool.name}</span>)}</div><div className="day-card-bottom"><span>{count ? `${count}/${item.lessons.length} adım tamamlandı` : `${item.lessons.length} uygulama adımı`}</span><ArrowUpRight size={20} /></div>
           </button>; })}</div>
         </section>
-        <section className="tools-teaser"><div><span className="eyebrow">DOĞRU İŞ İÇİN DOĞRU ARAÇ</span><h2>Araçları ezberlemeyeceğiz.<br />Ne işe yaradıklarını öğrenerek kullanacağız.</h2><p>30 farklı araç; hangi gün, hangi amaçla kullanacağımızı birlikte keşfedeceğiz.</p><button className="button dark" onClick={() => navigate('tools')}>Araç kutusunu aç <ArrowRight size={18} /></button></div><div className="tool-cloud">{['claude', 'gemini-cli', 'claude-code', 'canva', 'gamma', 'supabase'].map(id => { const tool = learningTools.find(t => t.id === id)!; return <a key={id} href={tool.url} target="_blank" rel="noopener noreferrer" className={`cloud-tool day-color-${tool.day}`}><span className="tool-logo">{tool.label}</span><span>{tool.name}<small>{toolDayLabel(tool)}</small></span><ArrowUpRight size={16} /><span className="sr-only">Yeni sekmede açılır</span></a>; })}</div></section>
+        <section className="tools-teaser"><div><span className="eyebrow">DOĞRU İŞ İÇİN DOĞRU ARAÇ</span><h2>Araçları ezberlemeyeceğiz.<br />Ne işe yaradıklarını öğrenerek kullanacağız.</h2><p>{trainingInfo.toolCount} farklı araç; hangi gün, hangi amaçla kullanacağımızı birlikte keşfedeceğiz.</p><button className="button dark" onClick={() => navigate('tools')}>Araç kutusunu aç <ArrowRight size={18} /></button></div><div className="tool-cloud">{['codex', 'claude', 'claude-code', 'canva', 'gamma', 'supabase'].map(id => { const tool = learningTools.find(t => t.id === id)!; return <a key={id} href={tool.url} target="_blank" rel="noopener noreferrer" className={`cloud-tool day-color-${tool.day}`}><span className="tool-logo">{tool.label}</span><span>{tool.name}<small>{toolDayLabel(tool)}</small></span><ArrowUpRight size={16} /><span className="sr-only">Yeni sekmede açılır</span></a>; })}</div></section>
         <section className="closing-note"><span className="note-icon"><Sparkles size={24} /></span><div><h3>Profesyonel yazılımcı olmamız gerekmiyor.</h3><p>Problemi tanımlayacağız, doğru görev vereceğiz ve ortaya çıkan ürünü kontrol edeceğiz.</p></div><button onClick={() => navigate('prompt')}>İlk istemimizi yazalım <ArrowRight size={18} /></button></section>
         <section className="training-details"><div className="audience-copy"><span className="eyebrow">KİMLER İÇİN?</span><h2>Kendi dersinde üreten tüm öğretmenler için.</h2><p>{trainingInfo.audience} katılabilir. Temel dijital becerilerle başlayacak; içerik üretimi, veri analizi, kendi asistanımızı geliştirme ve veritabanlı proje yayınlama deneyimi kazanacağız.</p></div><div className="trainer-list"><span className="eyebrow">EĞİTMENLERİMİZ</span>{trainingInfo.trainers.map(trainer => <article key={trainer.name} className="trainer-card"><span>{trainer.initials}</span><div><h3>{trainer.name}</h3><p>{trainer.role}</p></div></article>)}</div></section>
-        <section className="application-banner"><div><span className="eyebrow">{trainingInfo.dates.toLocaleUpperCase('tr')} · KONTENJAN SINIRLI</span><h2>Yapay zekâyla üreten öğretmenler topluluğuna katılın.</h2><p>Başvuru, eğitim soruları ve iletişim kanallarına tek bağlantıdan ulaşabilirsiniz.</p></div><a className="button primary" href={trainingInfo.applicationUrl} target="_blank" rel="noopener noreferrer">Başvuru ve iletişim <ArrowUpRight size={18} /><span className="sr-only">Yeni sekmede açılır</span></a></section>
+        <section className="application-banner"><div><span className="eyebrow">{trainingInfo.dates.toLocaleUpperCase('tr')} · KONTENJAN SINIRLI</span><h2>Yapay zekâyla üreten öğretmenler topluluğuna katılın.</h2><p>Başvuru ve eğitim sorularınız için WhatsApp veya e-postayı seçebilirsiniz.</p></div><ContactOptions /></section>
       </>}
 
       {day && lesson && <>
@@ -138,7 +139,7 @@ export default function App() {
       </>}
 
       {currentTab === 'tools' && <>
-        <div className="page-intro"><span className="eyebrow">EĞİTİMİN 30 ARAÇLIK KUTUSU</span><h1>Aracı değil, amacını öğrenerek başlayacağız.</h1><p>Her araç için basit bir açıklama, yapacağımız çalışma ve eğitimde kullanma nedenimiz. Bir aracı birden fazla gün, farklı amaçlarla kullanabileceğiz.</p></div>
+        <div className="page-intro"><span className="eyebrow">EĞİTİMİN {trainingInfo.toolCount} ARAÇLIK KUTUSU</span><h1>Aracı değil, amacını öğrenerek başlayacağız.</h1><p>Her araç için basit bir açıklama, yapacağımız çalışma ve eğitimde kullanma nedenimiz. Bir aracı birden fazla gün, farklı amaçlarla kullanabileceğiz.</p></div>
         <div className="tool-filters"><div className="filter-tabs" aria-label="Eğitim gününe göre filtrele">{[0, 1, 2, 3, 4].map(id => <button key={id} className={toolDay === id ? 'active' : ''} aria-pressed={toolDay === id} onClick={() => setToolDay(id)}>{id ? `${id}. Gün` : 'Tüm araçlar'}</button>)}</div><label className="search-input"><Search size={18} /><input type="search" aria-label="Araç veya kullanım amacı ara" placeholder="Araç veya amaç ara…" value={query} onChange={event => setQuery(event.target.value)} /></label></div>
         <p className="result-count" role="status">{filteredTools.length} araç · Ek deneme araçları isteğe bağlıdır.</p><div className="tool-grid">{filteredTools.map(tool => <ToolCard key={tool.id} tool={tool} />)}</div>{filteredTools.length === 0 && <div className="empty-state"><Search size={28} /><h2>Bu aramada bir araç bulamadık.</h2><p>Başka bir kelime veya eğitim günü deneyebilirsiniz.</p><button className="button subtle" onClick={() => { setQuery(''); setToolDay(0); }}>Filtreleri temizle</button></div>}
       </>}
@@ -147,7 +148,7 @@ export default function App() {
       </>}
       {currentTab === 'prompt' && <><div className="page-intro"><span className="eyebrow">İSTEM ATÖLYESİ</span><h1>İyi bir ürün, açık bir görevle başlayacak.</h1><p>Rolü, hedefi ve sınırları belirleyecek; hazırladığımız istemi seçtiğimiz araçta deneyip geliştireceğiz.</p></div><PromptBuilder /></>}
     </main>
-    <footer className="site-footer"><div className="footer-inner"><div><span className="footer-brand"><Layers3 size={18} /> Yapay Zekâ Eğitim Kılavuzu</span><p>Yapay zekâyla üreten öğretmenler için.</p></div><div className="footer-progress"><span>Öğrenme yolculuğum <b>{progress}%</b></span><div className="progress-track"><i style={{ width: `${progress}%` }} /></div><small>İlerleme bu tarayıcıda saklanır.</small></div><span className="footer-credit">Birlikte planlayacağız.<br />Birlikte üreteceğiz.</span></div></footer>
+    <footer className="site-footer"><div className="footer-inner"><div><span className="footer-brand"><Layers3 size={18} /> GencbeyinlerNet · Ekim 2026</span><p>Yapay zekâyla üreten öğretmenler için.</p></div><div className="footer-progress"><span>Öğrenme yolculuğum <b>{progress}%</b></span><div className="progress-track"><i style={{ width: `${progress}%` }} /></div><small>İlerleme bu tarayıcıda saklanır.</small></div><span className="footer-credit">Birlikte planlayacağız.<br />Birlikte üreteceğiz.</span></div></footer>
     {import.meta.env.MODE !== 'pages' && <BrainAssistant />}
   </>;
 }

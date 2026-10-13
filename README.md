@@ -1,4 +1,4 @@
-# Proje Tabanlı Yapay Zekâ Eğitim Kılavuzu
+# GencbeyinlerNet Proje Tabanli Yapay Zeka Eğitimi - Ekim 2026
 
 Öğretmenler için dört günlük uygulama kılavuzu. Eğitim günleri, araçların kullanım amaçları, örnek görevler ve istem atölyesi içerir.
 
@@ -37,7 +37,7 @@ npm run lint
 npm run build:pages
 ```
 
-Bu derleme yalnızca statik site dosyalarını içerir. Göreli dosya yolları, `/projetabanliklavuz/` altında yayınlanmayı destekler. Eğitim içerikleri, 30 araç, ilerleme takibi ve istem atölyesi çalışır. Sunucu gerektiren sohbet düğmesi Pages sürümünde gösterilmez; normal geliştirme ve Node.js üretim sürümünde kullanılabilir.
+Bu derleme yalnızca statik site dosyalarını içerir. Göreli dosya yolları, `/projetabanliklavuz/` altında yayınlanmayı destekler. Eğitim içerikleri, güncel araç listesi, ilerleme takibi, istem atölyesi ve WhatsApp/e-posta iletişim seçimi çalışır. Sunucu gerektiren sohbet düğmesi Pages sürümünde gösterilmez; normal geliştirme ve Node.js üretim sürümünde kullanılabilir.
 
 İş akışı başarılı olduktan sonra GitHub'ın deployment çıktısındaki site adresini açın. Ana sayfa, dört eğitim günü, araç filtreleri ve başvuru bağlantısını kontrol edin. API anahtarı Pages derlemesine veya Actions adımlarına eklenmemelidir.
 

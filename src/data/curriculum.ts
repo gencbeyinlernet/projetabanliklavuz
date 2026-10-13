@@ -34,12 +34,14 @@ export interface TrainingDay {
 }
 
 export const trainingInfo = {
-  "title": "Uygulamalı Proje Tabanlı Yapay Zekâ ile Ders Tasarımı Eğitimi",
+  "title": "GencbeyinlerNet Proje Tabanli Yapay Zeka Eğitimi - Ekim 2026",
   "dates": "19–22 Ekim 2026",
   "duration": "4 gün / 8 saat",
   "format": "Online · Canlı eğitim + kayıt",
-  "toolCount": 30,
+  "toolCount": 27,
   "applicationUrl": "https://linktr.ee/gencbeyinlernet",
+  "whatsappUrl": "https://api.whatsapp.com/send?phone=905071100053&text=Merhaba%2C%20web%20sitenizden%20yaz%C4%B1yorum.",
+  "email": "gencbeyinlernet@gmail.com",
   "audience": "Tüm branşlardan öğretmenler ve öğretmen adayları",
   "trainers": [
     {
@@ -60,10 +62,10 @@ export const trainingDays: TrainingDay[] = [
     "id": 1,
     "date": "2026-10-19",
     "dateLabel": "19 Ekim 2026",
-    "title": "Prompt tasarımı, Google ekosistemi ve Claude",
-    "subtitle": "İstemler, Claude & terminal",
-    "description": "Etkili istem yazacak, Google araçlarıyla içerik ve doküman dönüşümleri yapacağız. Claude Chat, Projects ve Artifacts’i kullanacak; Node.js ve Gemini CLI ile terminalde ajanlara görev vereceğiz.",
-    "outcome": "Ders içerikleri, bir Claude çalışma alanı ve terminalden çalışan ilk görevimizi hazırlayacağız.",
+    "title": "Prompt tasarımı, Google, Codex ve Claude",
+    "subtitle": "İstemler, Codex & Claude",
+    "description": "Etkili istem yazacak, Google araçlarıyla içerik ve doküman dönüşümleri yapacağız. Codex ve Claude ekosistemlerini birlikte tanıyacak; proje, içerik ve terminal çalışmalarında iki yaklaşımı karşılaştıracağız.",
+    "outcome": "Ders içerikleri, Codex ve Claude ile örnek görevler ve terminalden çalışan ilk uygulamamızı hazırlayacağız.",
     "icon": "Sparkles",
     "lessons": [
       {
@@ -103,15 +105,17 @@ export const trainingDays: TrainingDay[] = [
       },
       {
         "id": "claude-workspace",
-        "title": "Claude Chat, Projects ve Artifacts ile çalışacağız",
-        "description": "Claude Chat ile fikir geliştireceğiz. Projects içinde ders kaynaklarımızı ve ortak talimatlarımızı düzenleyecek; Artifacts ile içerik veya etkileşimli bir taslağı ayrı çalışma alanında geliştireceğiz.",
+        "title": "ChatGPT/Codex ve Claude ekosistemlerini birlikte kullanacağız",
+        "description": "ChatGPT/Codex ve Claude Chat, Projects, Artifacts, Cowork çalışma biçimlerini birlikte tanıyacağız. Aynı eğitim hedefinde içerik, kaynak, proje dosyası ve görev yönetimi yaklaşımlarını karşılaştıracağız.",
         "steps": [
-          "Chat üzerinden bir ders etkinliği taslağı hazırlayacağız.",
-          "Projects içinde bir branş çalışma alanı kurup kaynak ve yönergelerimizi ekleyeceğiz.",
-          "Artifacts ile çalışma kâğıdı veya etkileşimli içerik taslağı oluşturacağız.",
-          "Yanıt biçimini sınıf düzeyine ve öğretmen olarak beklentilerimize göre özelleştireceğiz."
+          "Aynı ders hedefini Codex ve Claude için açık bir görev olarak yazacağız.",
+          "ChatGPT ile hazırladığımız fikri Codex’te proje görevine dönüştürecek; Claude/Cowork ile benzer bir dosya ve iş akışı görevini inceleyeceğiz.",
+          "Claude Chat ile fikir üretecek, Projects içinde kaynak ve yönergeleri düzenleyecek, Artifacts ile içerik taslağı hazırlayacağız.",
+          "Codex’e bir proje planlatacak; dosyalar, arayüz ve test görevleri üzerinden geliştirme yaklaşımını inceleyeceğiz.",
+          "Her iki ekosistemin web, uygulama, terminal ve editör seçeneklerini tanıyıp erişebildiğimiz ortamda örnek görev deneyeceğiz.",
+          "Çıktıları doğruluk ve eğitimsel uygunluk açısından karşılaştırıp öğretmen olarak son kararı vereceğiz."
         ],
-        "output": "Kaynakları, talimatları ve örnek çıktısı düzenlenmiş bir Claude çalışma alanı."
+        "output": "Codex ve Claude ile hazırlanmış örnek görevler ve karşılaştırılmış çıktılar."
       },
       {
         "id": "terminal-cli",
@@ -129,7 +133,7 @@ export const trainingDays: TrainingDay[] = [
       {
         "id": "agent-task",
         "title": "Sohbet etmekten görev vermeye geçeceğiz",
-        "description": "Sohbet aracından fikir alacağız; ajana ise belirli bir ürün geliştirme görevi vereceğiz. Hedef, plan, uygulama, kontrol ve düzeltme adımlarını birlikte yürüteceğiz.",
+        "description": "Codex ve Claude ekosistemlerinde fikir isteme ile açık bir üretim görevi verme arasındaki farkı göreceğiz. Hedef, plan, uygulama, kontrol ve düzeltme adımlarını birlikte yürüteceğiz.",
         "steps": [
           "“Bir etkinlik fikri ver” ile “Etkileşimli bir etkinlik oluştur” görevlerini karşılaştıracağız.",
           "Ders, konu, kazanım, sınıf düzeyi, cihaz ve tasarım beklentilerimizi açıkça yazacağız.",
@@ -139,6 +143,18 @@ export const trainingDays: TrainingDay[] = [
         ],
         "output": "Ajanın uygulayabileceği açık ve aşamalı bir görev tanımı.",
         "prompt": "5. sınıf fotosentez konusunu öğreten mobil uyumlu bir web uygulaması geliştireceğiz. Önce mevcut dosyaları incele ve plan öner. Konu anlatımı, etkileşimli etkinlik ve geri bildirimli üç soru ekle. Değişiklikleri küçük adımlarla yap; her adımda neyi test edeceğimizi belirt. Öğrenci kişisel verilerini toplama."
+      },
+      {
+        "id": "github-basics",
+        "title": "GitHub ile proje ve sürüm mantığını öğreneceğiz",
+        "description": "GitHub’da depo, dosya ve sürüm kavramlarını tanıyacağız. Eğitim deposunu açıp bir projenin nasıl saklandığını ve geliştirildiğini inceleyeceğiz.",
+        "steps": [
+          "GitHub hesabı ve depo kavramını tanıyacağız.",
+          "Eğitimin kaynak deposunu açıp dosyaları ve README açıklamasını inceleyeceğiz.",
+          "Bir dosya değişikliğinin commit ile nasıl kaydedildiğini ve geçmişte nasıl izlendiğini göreceğiz.",
+          "API anahtarlarını ve kişisel verileri herkese açık depoya eklemeyeceğiz."
+        ],
+        "output": "Proje dosyalarını ve sürümlerini takip edebileceğimiz bir GitHub çalışma akışı."
       }
     ]
   },
@@ -155,13 +171,26 @@ export const trainingDays: TrainingDay[] = [
       {
         "id": "visual-design",
         "title": "Kavramları görsellerle anlatacağız",
-        "description": "Canva AI ve Adobe Firefly ile ders kazanımına uygun afiş, görsel ve yeniden kullanabileceğimiz şablonlar hazırlayacağız. Görsel üretimini konu anlatımına destek olacak şekilde yönlendireceğiz.",
+        "description": "Canva AI ile ders kazanımına uygun afiş, görsel ve yeniden kullanabileceğimiz şablonlar hazırlayacağız. Görsel üretimini konu anlatımına destek olacak şekilde yönlendireceğiz.",
         "steps": [
           "Görselin anlatacağı tek bir kavramı seçeceğiz.",
-          "Firefly ile taslak üretecek, Canva ile başlık ve açıklamaları düzenleyeceğiz.",
-          "Okunabilirliği, telif koşullarını ve yaş düzeyini kontrol edeceğiz."
+          "Canva’da görsel, başlık ve açıklamaları hazırlayıp düzenleyeceğiz.",
+          "Okunabilirliği, kullanım haklarını ve yaş düzeyini kontrol edeceğiz."
         ],
         "output": "Dersimizde kullanacağımız bir görsel materyal."
+      },
+      {
+        "id": "canva-code-activity",
+        "title": "Canva Code ile etkileşimli ders etkinliği hazırlayacağız",
+        "description": "Canva Code’a ders hedefimizi ve öğrencinin yapacağı işlemi sade bir görev olarak tarif edeceğiz. Hazırlanan etkileşimli taslağı deneyip öğretmen olarak geliştireceğiz.",
+        "steps": [
+          "Ders, sınıf düzeyi ve etkinlik kazanımını belirleyeceğiz.",
+          "Eşleştirme, bilgi kartı veya kısa değerlendirme gibi küçük bir etkileşim tarif edeceğiz.",
+          "Canva Code’un oluşturduğu taslağı örnek yanıtlarla test edeceğiz.",
+          "Hatalı bilgi, okunabilirlik ve telefon kullanımı için geri bildirim verip düzenleyeceğiz."
+        ],
+        "output": "Canva Code ile hazırlanmış ve kontrol edilmiş etkileşimli ders taslağı.",
+        "prompt": "5. sınıf öğrencileri için fotosentez konusunu öğreten bir eşleştirme etkinliği hazırla. Öğrenci doğru eşleştirmede kısa geri bildirim alsın. Sade Türkçe kullan, büyük ve okunaklı düğmeler ekle, telefon ekranına uyum sağla."
       },
       {
         "id": "presentation-diagram",
@@ -177,7 +206,7 @@ export const trainingDays: TrainingDay[] = [
       {
         "id": "video-short-film",
         "title": "Metin ve görselden kısa eğitim videosu oluşturacağız",
-        "description": "Önce kısa bir senaryo ve sahne planı yazacağız. Adobe Firefly’ın hesabımızda kullanılabilen video özelliklerini veya Canva’nın video düzenleyicisini kullanarak metin ve görselleri bir anlatımda birleştireceğiz.",
+        "description": "Kısa bir senaryo ve sahne planı yazacak, Canva’nın hesabımızda erişebildiğimiz görsel ve video özelliklerini kullanacağız. Klip, görsel, ses ve altyazıyı birleştirerek kısa eğitim videosu hazırlayacağız.",
         "steps": [
           "Bir kazanımı anlatan 30–60 saniyelik kısa film fikri belirleyeceğiz.",
           "Giriş, olay ve sonuç için bir sahne listesi yazacağız.",
@@ -205,27 +234,27 @@ export const trainingDays: TrainingDay[] = [
     "date": "2026-10-21",
     "dateLabel": "21 Ekim 2026",
     "title": "Akademik analiz, AI sistemleri ve otomasyon",
-    "subtitle": "Araştırma, Claude Code & iş akışları",
-    "description": "Akademik araştırma ve belge analizi yapacağız. Müfredat ve verileri inceleyecek, öğretmen asistanı tasarlayacak; Claude Code ve Cowork ile üretim ve otomasyon akışları kuracağız.",
+    "subtitle": "Araştırma, Codex & Claude Code",
+    "description": "Akademik araştırma ve belge analizi yapacağız. Müfredat ve verileri inceleyecek, öğretmen asistanı tasarlayacak; Codex, Claude Code ve Cowork ile üretim ve otomasyon akışlarını birlikte ele alacağız.",
     "outcome": "Kaynaklı analiz, bir öğretmen asistanı taslağı ve tekrar kullanılabilir iş akışı oluşturacağız.",
     "icon": "Terminal",
     "lessons": [
       {
         "id": "research-material",
         "title": "Literatür taraması yapacak, makale ve proje raporu hazırlayacağız",
-        "description": "Consensus ve STORM ile araştırma sorumuz için kaynak arayacağız. Mendeley ile kaynakçayı düzenleyecek, gerekiyorsa Overleaf ile rapor hazırlayacağız.",
+        "description": "Consensus ve STORM ile araştırma sorumuz için kaynak arayacağız. Kaynakçayı düzenleyecek, Overleaf ile kaynaklı bir rapor taslağı hazırlayacağız.",
         "steps": [
           "Ders veya proje konumuzla ilgili bir araştırma sorusu belirleyeceğiz.",
           "Consensus ve STORM ile makale arayıp önerilen kaynakların asıllarını okuyacağız.",
           "Bir makalenin yöntem, bulgu ve sınırlılıklarını analiz edeceğiz.",
-          "Mendeley ile kaynakçayı düzenleyecek, Overleaf ile kaynaklı rapor taslağı hazırlayacağız."
+          "Kaynakçayı düzenleyecek, Overleaf ile kaynaklı rapor taslağı hazırlayacağız."
         ],
         "output": "Kaynakları kontrol edilmiş bir materyal dosyası."
       },
       {
         "id": "document-data",
         "title": "Belge ve örnek verileri inceleyeceğiz",
-        "description": "NotebookLM ve Claude ile PDF ve Word belgelerinden özet çıkaracağız. Julius AI ile kimlik bilgisi içermeyen Excel veya CSV tablosunu inceleyip müfredat kazanımlarıyla ilişkili bir analiz hazırlayacağız.",
+        "description": "NotebookLM, ChatGPT ve Claude ile PDF, Word, Excel ve CSV dosyalarını inceleyeceğiz. Kimlik bilgisi içermeyen örnek verilerden özet, kazanım analizi ve grafik hazırlayacağız.",
         "steps": [
           "Ders notu, müfredat belgesi ve kimlik bilgisi içermeyen örnek veri tablosu kullanacağız.",
           "PDF ve Word belgelerindeki ana kavramları ve kazanımları çıkaracağız.",
@@ -237,7 +266,7 @@ export const trainingDays: TrainingDay[] = [
       {
         "id": "teacher-assistant",
         "title": "Branşımıza özel bir AI öğretmen asistanı tasarlayacağız",
-        "description": "Asistanımızın hangi ders için ve hangi sınırlar içinde çalışacağını belirleyeceğiz. Claude Projects ile kaynak temelli bir örnek hazırlayacak; Flowise, LM Studio ve Ollama üzerinden farklı ajan ve model çalışma biçimlerini inceleyeceğiz.",
+        "description": "Asistanımızın hangi ders için ve hangi sınırlar içinde çalışacağını belirleyeceğiz. ChatGPT/Codex ve Claude ile örnek görevler hazırlayacak; LM Studio ve Ollama ile yerel model çalışma biçimlerini inceleyeceğiz.",
         "steps": [
           "Branş, sınıf düzeyi, kaynaklar ve yanıt kurallarını belirleyeceğiz.",
           "Asistana ders planı ve öğrenci sorusu gibi örnek görevler vereceğiz.",
@@ -248,8 +277,8 @@ export const trainingDays: TrainingDay[] = [
       },
       {
         "id": "automation-cowork",
-        "title": "Cowork ile iş akışını ve zamanlanmış görevleri düzenleyeceğiz",
-        "description": "Tekrar eden belge ve içerik işlerini küçük görevlere ayıracağız. Cowork ile dosya odaklı bir çalışma akışı hazırlayacak; hesabımızda destekleniyorsa zamanlanmış görev ve entegrasyon özelliklerini deneyeceğiz.",
+        "title": "ChatGPT/Codex ve Claude/Cowork ile iş akışını düzenleyeceğiz",
+        "description": "Tekrar eden belge ve içerik işlerini küçük görevlere ayıracağız. ChatGPT/Codex ve Claude/Cowork ile dosya odaklı çalışma örneklerini karşılaştıracak; kullandığımız hesapta desteklenen zamanlanmış görev ve entegrasyon özelliklerini inceleyeceğiz.",
         "steps": [
           "Haftalık ders özeti ve materyal düzenleme gibi tekrar eden bir iş seçeceğiz.",
           "Girdi dosyalarını, işlem adımlarını ve beklediğimiz çıktıyı tanımlayacağız.",
@@ -260,13 +289,14 @@ export const trainingDays: TrainingDay[] = [
       },
       {
         "id": "claude-code-project",
-        "title": "Claude Code ile planlayacak, üretecek ve hata çözeceğiz",
-        "description": "Claude Code’u proje klasörümüzde kullanarak bir uygulamanın dosyalarını geliştireceğiz. Word belgesindeki hedef → plan → görevler → uygulama → kontrol → düzeltme döngüsünü kullanacağız.",
+        "title": "Codex ve Claude Code ile planlayacak, üretecek ve hata çözeceğiz",
+        "description": "Aynı uygulama geliştirme hedefini Codex ve Claude Code ile deneyeceğiz. Proje dosyalarını küçük görevlerle geliştirecek; planlama, test ve hata çözme adımlarını iki ekosistemde karşılaştıracağız.",
         "steps": [
-          "İlk günün uygulama fikrini ve eksiklerini değerlendireceğiz.",
+          "Uygulama fikrini Codex ve Claude Code için aynı gereksinimlerle tarif edeceğiz.",
           "Projeyi arayüz, içerik, etkileşim ve test görevlerine ayıracağız.",
-          "Ajanın değiştirdiği dosyaları inceleyip uygulamayı çalıştıracağız.",
-          "Hata mesajını okuyacak; sorunun kod, API, model veya bağlantı kaynaklı olduğunu belirleyip küçük bir düzeltmeyle yeniden test edeceğiz."
+          "Her iki aracın önerdiği dosya değişikliklerini inceleyip uygulamayı çalıştıracağız.",
+          "Hata mesajını okuyacak; kod, API, model veya bağlantı kaynaklı sorunu belirleyip küçük bir düzeltmeyle yeniden test edeceğiz.",
+          "Ortaya çıkan ürünleri eğitimsel uygunluk ve kullanılabilirlik açısından karşılaştıracağız."
         ],
         "output": "Dosyaları ve test notları olan geliştirilebilir bir uygulama prototipi.",
         "prompt": "5. sınıf fotosentez konusunu öğreten mobil uyumlu bir web uygulaması geliştireceğiz. Önce mevcut dosyaları incele ve plan öner. Konu anlatımı, etkileşimli etkinlik ve geri bildirimli üç soru ekle. Değişiklikleri küçük adımlarla yap; her adımda neyi test edeceğimizi belirt. Öğrenci kişisel verilerini toplama."
@@ -310,7 +340,7 @@ export const trainingDays: TrainingDay[] = [
       {
         "id": "quiz-share",
         "title": "Değerlendirmeyi etkileşimli hâle getireceğiz",
-        "description": "Conker ile hazırladığımız soruları kontrol edecek; Google Forms veya Wayground’da çevrimiçi bir değerlendirme etkinliğine dönüştüreceğiz.",
+        "description": "Conker ile hazırladığımız soruları kontrol edecek; Google Forms ile çevrimiçi bir değerlendirme etkinliğine dönüştüreceğiz.",
         "steps": [
           "Kazanım, soru türü ve geri bildirim beklentimizi belirleyeceğiz.",
           "Soruları seçtiğimiz aracın kendi düzenleyicisine aktaracağız.",
@@ -322,10 +352,10 @@ export const trainingDays: TrainingDay[] = [
       {
         "id": "education-agent",
         "title": "Eğitim amaçlı ajanı test edecek, sonuçları görselleştireceğiz",
-        "description": "Cevabı doğrudan söylemek yerine öğrenciye ipucu veren bir ajan tasarlayacağız. Örnek değerlendirme verilerini Julius AI ile inceleyip Napkin AI ile öğrenme akışını görselleştireceğiz.",
+        "description": "Codex ve Claude ile öğrenciye doğrudan cevap yerine ipucu veren bir ajan tasarlayacağız. ChatGPT veya Claude ile örnek değerlendirme verilerini inceleyecek, Napkin AI ile öğrenme akışını görselleştireceğiz.",
         "steps": [
           "Asistanımız için örnek öğrenci soruları ve beklenen davranışlar yazacağız.",
-          "Flowise veya kodladığımız uygulamada ipucu ve geri bildirim akışını deneyeceğiz.",
+          "Codex veya Claude ile geliştirdiğimiz uygulamada ipucu ve geri bildirim akışını deneyeceğiz.",
           "Örnek değerlendirme sonuçlarını grafikle göstereceğiz.",
           "Öğrencinin nerede desteğe ihtiyacı olduğunu öğretmen olarak değerlendireceğiz."
         ],
@@ -334,7 +364,7 @@ export const trainingDays: TrainingDay[] = [
       {
         "id": "database-app",
         "title": "Uygulamamıza veritabanı ekleyeceğiz",
-        "description": "Supabase veya Firebase ile uygulama verisini saklayan küçük bir örnek hazırlayacağız. Kullanıcının hangi veriye erişebileceğini belirleyip okuma ve yazma işlemlerini test edeceğiz.",
+        "description": "Codex veya Claude Code desteğiyle Supabase ya da Firebase bağlantısı kuracağız. Kullanıcının hangi veriye erişebileceğini belirleyip veri okuma ve yazma işlemlerini test edeceğiz.",
         "steps": [
           "Uygulamamızda hangi bilgiyi saklayacağımızı belirleyeceğiz; kişisel veri yerine örnek veri kullanacağız.",
           "Supabase’de tablo ve erişim kuralları veya Firebase’de veri yapısı ve güvenlik kuralları hazırlayacağız.",
@@ -394,6 +424,7 @@ export const learningTools: LearningTool[] = [
     "purpose": "İlk taslağı hızlı oluşturmak ve alternatifleri karşılaştırmak için kullanacağız.",
     "optional": false,
     "alsoOnDays": [
+      3,
       4
     ]
   },
@@ -463,6 +494,35 @@ export const learningTools: LearningTool[] = [
     ]
   },
   {
+    "id": "codex",
+    "name": "OpenAI Codex",
+    "label": "Cx",
+    "day": 1,
+    "alsoOnDays": [
+      3,
+      4
+    ],
+    "url": "https://developers.openai.com/codex/",
+    "description": "Proje planlama, dosya geliştirme ve test süreçlerinde çalışan yapay zekâ ajanı.",
+    "activity": "Claude ekosistemiyle aynı eğitim görevini karşılaştıracak; uygulama dosyalarını geliştirip test edeceğiz.",
+    "purpose": "Öğretmen fikrimizi çalışan bir projeye dönüştürmek ve iki ekosistemin çalışma biçimlerini birlikte öğrenmek için kullanacağız."
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "label": "GH",
+    "day": 1,
+    "url": "https://github.com",
+    "description": "Proje dosyalarını ve sürümlerini saklama platformu.",
+    "activity": "İlk gün proje deposunu ve sürüm mantığını tanıyacak; sonraki günlerde dosyalarımızı kaydedip yayın akışında kullanacağız.",
+    "purpose": "Değişiklikleri takip etmek ve projemizi paylaşmak için kullanacağız.",
+    "optional": false,
+    "alsoOnDays": [
+      3,
+      4
+    ]
+  },
+  {
     "id": "canva",
     "name": "Canva",
     "label": "Ca",
@@ -471,17 +531,6 @@ export const learningTools: LearningTool[] = [
     "description": "Görsel, çalışma kâğıdı ve sunum tasarım aracı.",
     "activity": "Dersimiz için afiş, çalışma kâğıdı ve kısa video hazırlayacağız.",
     "purpose": "İçeriği okunabilir ve görsel olarak anlaşılır hâle getirmek için kullanacağız.",
-    "optional": false
-  },
-  {
-    "id": "firefly",
-    "name": "Adobe Firefly",
-    "label": "Fi",
-    "day": 2,
-    "url": "https://firefly.adobe.com",
-    "description": "Metinle tarif ederek görsel taslakları üretme aracı.",
-    "activity": "Bir ders kavramı için örnek görsel üreteceğiz.",
-    "purpose": "Anlatmak istediğimiz kavrama uygun görsel seçenekleri hazırlamak için kullanacağız.",
     "optional": false
   },
   {
@@ -521,6 +570,16 @@ export const learningTools: LearningTool[] = [
     "optional": false
   },
   {
+    "id": "canva-code",
+    "name": "Canva Code",
+    "label": "</>",
+    "day": 2,
+    "url": "https://www.canva.com/ai/code/",
+    "description": "Canva içinde tarif ederek etkileşimli içerik taslakları hazırlama özelliği.",
+    "activity": "Bir ders etkinliğini tarif edecek; etkileşimli kart, kısa alıştırma veya mini değerlendirme taslağı hazırlayacağız.",
+    "purpose": "Görsel materyalimizi öğrencinin katılabildiği bir öğrenme etkinliğine dönüştürmek için kullanacağız."
+  },
+  {
     "id": "notebooklm",
     "name": "NotebookLM",
     "label": "N",
@@ -532,20 +591,6 @@ export const learningTools: LearningTool[] = [
     "optional": false,
     "alsoOnDays": [
       1
-    ]
-  },
-  {
-    "id": "julius",
-    "name": "Julius AI",
-    "label": "J",
-    "day": 3,
-    "url": "https://julius.ai",
-    "description": "Tabloları incelemeye ve grafik üretmeye yardımcı araç.",
-    "activity": "Kimlik bilgisi içermeyen örnek başarı tablosunu analiz edeceğiz.",
-    "purpose": "Veriden öğrenme ihtiyaçlarını görmek ve destek planlamak için kullanacağız.",
-    "optional": false,
-    "alsoOnDays": [
-      4
     ]
   },
   {
@@ -610,17 +655,6 @@ export const learningTools: LearningTool[] = [
     "optional": true
   },
   {
-    "id": "mendeley",
-    "name": "Mendeley",
-    "label": "M",
-    "day": 3,
-    "url": "https://www.mendeley.com",
-    "description": "Kaynakları ve kaynakçayı düzenleme aracı.",
-    "activity": "Kullandığımız araştırmaları bir araya getirip kaynakça hazırlayacağız.",
-    "purpose": "Materyallerimizin dayanaklarını düzenli saklamak için kullanacağız.",
-    "optional": true
-  },
-  {
     "id": "overleaf",
     "name": "Overleaf",
     "label": "Ov",
@@ -641,8 +675,8 @@ export const learningTools: LearningTool[] = [
     ],
     "url": "https://code.claude.com/docs/en/overview",
     "description": "Proje klasöründe kod ve dosyalarla çalışan geliştirme ajanı.",
-    "activity": "Uygulama dosyalarını küçük görevlerle geliştirecek, hata mesajlarını inceleyip test edeceğiz.",
-    "purpose": "Uygulama fikrimizi çalışan ürüne dönüştürmek ve geliştirme sürecini yönetmek için kullanacağız."
+    "activity": "Codex ile aynı uygulama hedefini deneyecek; dosyaları geliştirecek, hataları inceleyecek ve test edeceğiz.",
+    "purpose": "Kod geliştirme ve hata çözme yöntemlerini iki ekosistemde karşılaştırmak için kullanacağız."
   },
   {
     "id": "cowork",
@@ -651,21 +685,10 @@ export const learningTools: LearningTool[] = [
     "day": 3,
     "url": "https://claude.com/product/cowork",
     "description": "Dosya ve tekrar eden işler üzerinde görevlerle çalışma alanı.",
-    "activity": "Materyal dosyalarını düzenleyecek ve desteklenen özelliklerle zamanlanmış görev taslağı oluşturacağız.",
-    "purpose": "Tekrar eden işleri bir akışa dönüştürmek ve kontrol adımlarını belirlemek için kullanacağız."
-  },
-  {
-    "id": "flowise",
-    "name": "Flowise",
-    "label": "F",
-    "day": 4,
-    "url": "https://flowiseai.com",
-    "description": "Yapay zekâ iş akışlarını görsel olarak kurma aracı.",
-    "activity": "Bir soru-cevap asistanının örnek akışını inceleyeceğiz.",
-    "purpose": "Ajanın adımlarını ve araç bağlantılarını görerek anlamak için kullanacağız.",
-    "optional": true,
+    "activity": "ChatGPT/Codex ve Claude/Cowork yaklaşımlarını birlikte tanıyacak; dosya düzenleme ve tekrar eden işleri örnek görevlerle karşılaştıracağız.",
+    "purpose": "İki ekosistemdeki görev ve iş akışı yönetimini karşılaştırmak için kullanacağız.",
     "alsoOnDays": [
-      3
+      1
     ]
   },
   {
@@ -689,28 +712,6 @@ export const learningTools: LearningTool[] = [
     "activity": "Sorularımızı forma ekleyip örnek cevaplarla deneyeceğiz.",
     "purpose": "Yanıtları toplamak ve öğrenme durumunu görmek için kullanacağız.",
     "optional": true
-  },
-  {
-    "id": "wayground",
-    "name": "Wayground (Quizizz)",
-    "label": "W",
-    "day": 4,
-    "url": "https://wayground.com",
-    "description": "Etkileşimli alıştırma ve değerlendirme platformu.",
-    "activity": "Kazanıma uygun bir tekrar etkinliği hazırlayacağız.",
-    "purpose": "Öğrencilerin kendi hızlarında pratik yapmasını desteklemek için kullanacağız.",
-    "optional": true
-  },
-  {
-    "id": "github",
-    "name": "GitHub",
-    "label": "GH",
-    "day": 4,
-    "url": "https://github.com",
-    "description": "Proje dosyalarını ve sürümlerini saklama platformu.",
-    "activity": "Kaynak kodumuzu ve kurulum açıklamalarımızı düzenli olarak kaydedeceğiz.",
-    "purpose": "Değişiklikleri takip etmek ve projemizi paylaşmak için kullanacağız.",
-    "optional": false
   },
   {
     "id": "netlify",
@@ -757,7 +758,7 @@ export function toolDayLabel(tool: LearningTool) {
 // Shared program facts keep the assistant consistent with the site.
 export const curriculumContext = `${trainingInfo.title}
 Tarih: ${trainingInfo.dates}. Süre: ${trainingInfo.duration}. Katılım: ${trainingInfo.format}. Araç sayısı: ${trainingInfo.toolCount}.
-Katılımcılar: ${trainingInfo.audience}. Temel dijital beceriler yeterlidir. Başvuru ve iletişim: ${trainingInfo.applicationUrl}.
+Katılımcılar: ${trainingInfo.audience}. Temel dijital beceriler yeterlidir. Başvuru ve iletişim: WhatsApp ${trainingInfo.whatsappUrl} veya e-posta ${trainingInfo.email}.
 Eğitmenler: ${trainingInfo.trainers.map(trainer => `${trainer.name}: ${trainer.role}`).join('; ')}.
 ` + trainingDays.map(day => `${day.id}. Gün (${day.dateLabel}): ${day.title}. ${day.description}
 ${day.lessons.map(lesson => `${lesson.title}: ${lesson.description}`).join('\n')}

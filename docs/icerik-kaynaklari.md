@@ -6,14 +6,14 @@ Kullanıcının paylaştığı afiş metni tarih ve gün dağılımı için esas
 
 | Gün | Tarih | Akış |
 | --- | --- | --- |
-| 1 | 19 Ekim 2026 | Prompt tasarımı, Google ekosistemi, Claude Chat/Projects/Artifacts, Node.js, Gemini CLI ve terminal |
-| 2 | 20 Ekim 2026 | Görsel, şablon, sunum, video, kısa film, seslendirme ve düzenleme |
-| 3 | 21 Ekim 2026 | Akademik araştırma, PDF/Word/Excel ve müfredat analizi, öğretmen asistanı, Claude Code, Cowork ve otomasyon |
+| 1 | 19 Ekim 2026 | Prompt tasarımı, Google ekosistemi, ChatGPT/Codex ve Claude/Cowork, Node.js, Gemini CLI, GitHub ve terminal |
+| 2 | 20 Ekim 2026 | Canva AI/Canva Code ile görsel ve etkileşimli içerik, sunum, video, kısa film, seslendirme ve düzenleme |
+| 3 | 21 Ekim 2026 | Akademik araştırma, PDF/Word/Excel ve müfredat analizi, öğretmen asistanı, ChatGPT/Codex, Claude Code, Cowork ve otomasyon |
 | 4 | 22 Ekim 2026 | Test ve rubrik, online sınav, eğitim ajanları, veri görselleştirme, API, veritabanı ve yayın |
 
-Süre: 4 gün / 8 saat. Katılım: online, canlı eğitim + kayıt. Eğitmenler: Burak TURGUT ve Türker ÖRÜN. Başvuru ve iletişim: https://linktr.ee/gencbeyinlernet.
+Süre: 4 gün / 8 saat. Katılım: online, canlı eğitim + kayıt. Eğitmenler: Burak TURGUT ve Türker ÖRÜN. Başvuru ve iletişim: WhatsApp 0507 110 00 53 veya gencbeyinlernet@gmail.com. Kullanıcı düğmeye tıklayınca tercih ettiği kanalı seçer.
 
-Günlük başlangıç saatleri, toplantı platformu, ücret, WhatsApp telefon numarası ve kanal adresi paylaşılmadı. E-posta metni maskeli olduğu için kullanılabilir bir e-posta adresi olarak eklenmedi. Başvuru ve iletişim, verilen Linktree adresine yönlendirilir.
+Günlük başlangıç saatleri, toplantı platformu, ücret ve WhatsApp kanal adresi paylaşılmadı. Kullanıcının son mesajında sağladığı WhatsApp iletişim bağlantısı hazır mesajı açar; e-posta seçeneği mailto bağlantısıyla gencbeyinlernet@gmail.com adresine yeni ileti oluşturur. Site otomatik mesaj veya e-posta göndermez.
 
 ## Word belgesinin kullanımı
 
@@ -21,15 +21,17 @@ Depodaki **Proje Tabanlı Yapay Zekâ Eğitimi Paylaşımlar.docx** belgesi önc
 
 Belgedeki terminal ve Gemini CLI içeriği yeni programın 1. gününe taşındı. Ajan yönetimi, projeyi küçük görevlere bölme, dosyalarla çalışma, Antigravity ve hata ayıklama uygulamaları 3. güne; API bağlantısı ve anahtar güvenliği 4. güne yerleştirildi. İnsan kontrolü, eğitimsel uygunluk ve tekrar test etme yaklaşımı tüm aşamalarda korundu.
 
-## 30 araç
+## Güncel araç listesi
 
-Kullanıcı araç sayısının 30 olmasını istedi. Paylaşılan listelerdeki 20 araç ve içerikte adı geçen Cowork korundu. Liste, önceki kılavuz ve Word içeriğinden seçilen 9 araçla tamamlandı: Antigravity, Flowise, Napkin AI, STORM, Mendeley, Overleaf, Conker, Google Forms ve Wayground (Quizizz).
+Kullanıcının son düzenlemeleriyle Adobe Firefly, Julius AI, Mendeley ve Flowise aktif programdan çıkarıldı. Canva Code 2. güne eklendi. Codex, ChatGPT ve Claude/Cowork birlikte ele alınır; GitHub 1., 3. ve 4. günlerde kullanılır ve kaynaklar bölümünde platform ile eğitim deposunun bağlantıları yer alır.
 
-Toplam 30 benzersiz araç vardır. Claude Chat, Projects ve Artifacts özellikleri tek Claude aracının uygulamalarında açıklanır; toplamı artırmak için ayrı araç olarak sayılmaz. Bir araç farklı günlerde yeniden kullanılabilir; `alsoOnDays` kayıtları ve ortak filtre fonksiyonu bu ilişkiyi korur.
+Son değişikliklerden sonra listede 27 araç vardır. Görünen sayı `trainingInfo.toolCount` alanından kullanılır. Araç sayısını 30'a çıkarmak için ek araçlar kullanıcı tarafından ayrıca belirlenmelidir; çıkarılan araçlar sayıyı korumak amacıyla geri eklenmez.
 
-`src/data/curriculum.ts` tarihlerin, eğitmenlerin, programın ve araçların ortak kaynağıdır. Site ve sohbet asistanı aynı programı kullanır. Her araç kaydı açıklama, yapacağımız uygulama, kullanım nedeni ve resmî adres içerir. Ek deneme araçları alternatif çalışma yöntemleri için işaretlenir.
+Claude Chat, Projects ve Artifacts, Claude araç kaydının uygulamalarında açıklanır. Canva Code, kullanıcının istediği üzere ayrı bir etkileşimli içerik aracı olarak listelenir. Bir araç farklı günlerde yeniden kullanılabilir; `alsoOnDays` ve ortak filtre fonksiyonu bu ilişkiyi korur.
 
-Araç özellikleri, ücretler, kullanım limitleri, donanım gereksinimleri ve erişim koşulları sağlayıcıya göre değişir. Zamanlanmış görev ve video üretimi gibi uygulamalar hesapta desteklenen özelliklerle anlatılır; ücretsiz veya sınırsız kullanım vaat edilmez.
+`src/data/curriculum.ts`, tarihlerin, eğitim adının, iletişim adreslerinin, programın ve araçların ortak kaynağıdır. Site ve sohbet asistanı aynı bilgileri kullanır. Her araç kaydı açıklama, uygulama, kullanım nedeni ve resmî adres içerir.
+
+Araç özellikleri, ücretler, kullanım limitleri, donanım gereksinimleri ve erişim koşulları sağlayıcıya göre değişir. Zamanlanmış görev ve video üretimi gibi uygulamalar hesapta desteklenen özelliklerle anlatılır.
 
 ## Yayın
 

@@ -1,4 +1,5 @@
 import { ArrowUpRight, Layers3 } from 'lucide-react';
+import { trainingInfo } from '../data/curriculum';
 
 interface HeaderProps { currentTab: string; onChangeTab: (tab: string) => void; }
 
@@ -11,9 +12,9 @@ export default function Header({ currentTab, onChangeTab }: HeaderProps) {
   ];
   return <header className="site-header">
     <div className="header-inner">
-      <button className="brand" onClick={() => onChangeTab('home')} aria-label="Eğitim kılavuzu ana sayfa">
+      <button className="brand" onClick={() => onChangeTab('home')} aria-label={`${trainingInfo.title} ana sayfa`}>
         <span className="brand-mark"><Layers3 size={24} /></span>
-        <span>yapay zekâ<span className="brand-caption">EĞİTİM KILAVUZU</span></span>
+        <span>GencbeyinlerNet<span className="brand-caption">PROJE TABANLI YAPAY ZEKA EĞİTİMİ</span><span className="brand-month">EKİM 2026</span></span>
       </button>
       <nav aria-label="Ana gezinme" className="desktop-nav">
         {items.map(item => <button key={item.id} id={`nav-${item.id}`} aria-current={currentTab === item.id ? 'page' : undefined} onClick={() => onChangeTab(item.id)}>{item.label}</button>)}
